@@ -14,7 +14,7 @@ function countLetters(sentence) {
       letterCount[letter]++;
     }
   }
-  console.log(letterCount);
+  return letterCount;
 }
 
-countLetters("lighthouse in the house");
+console.log(countLetters("lighthouse in the house"));
