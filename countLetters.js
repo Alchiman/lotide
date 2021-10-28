@@ -5,12 +5,16 @@ const assertEqual = function (actual, expected) {
 };
 
 function countLetters(sentence) {
+  const str = sentence.split(" ").join("");
   const letterCount = {};
-  for (letter of sentence) {
-    letterCount[letter] = lette;
-    console.log(letter);
+  for (letter of str) {
+    if (!letterCount[letter]) {
+      letterCount[letter] = 1;
+    } else {
+      letterCount[letter]++;
+    }
   }
   console.log(letterCount);
 }
 
-countLetters("Lighthouse Lab");
+countLetters("lighthouse in the house");
