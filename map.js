@@ -5,7 +5,7 @@ const map = function (array, callback) {
   }
   return results;
 };
-const results1 = map(words, (word) => word[0]);
+// const results1 = map(words, (word) => word[0]);
 module.exports = map;
 // console.log(results1);
 // const eqArrays = function (array1, array2) {
