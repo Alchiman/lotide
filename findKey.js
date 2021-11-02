@@ -1,8 +1,18 @@
-const assertEqual = function (actual, expected) {
-  return actual === expected
-    ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
+const findKey = function (object, callback) {
+  for (const key in object) {
+    // console.log(object[key]["stars"]);
+    if (callback(object[key])) {
+      return key;
+    }
+  }
+  return undefined;
 };
+module.exports = findKey;
+// const assertEqual = function (actual, expected) {
+//   return actual === expected
+//     ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
+//     : console.log(`🛑🛑🛑 Assertion failed: ${actual} !== ${expected}`);
+// };
 // assertEqual("Lighthouse Labs", "Bootcamp");
 // assertEqual(1, 1);
 
@@ -17,15 +27,6 @@ const assertEqual = function (actual, expected) {
 //   }
 //   return console.log(foundKey);
 // };
-const findKey = function (object, callback) {
-  for (const key in object) {
-    // console.log(object[key]["stars"]);
-    if (callback(object[key])) {
-      return key;
-    }
-  }
-  return undefined;
-};
 
 // findKey(
 //   {
